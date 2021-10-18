@@ -1,0 +1,13 @@
+.menu-body{
+    width: 100%;
+    height: 100%;
+}
+.menu{
+    width: 100%;
+    margin: 40px 0;
+    height: 50px;
+}
+
+.menu button{
+    border-radius: 0;
+}

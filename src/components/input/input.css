@@ -1,0 +1,191 @@
+.inputBody{
+    width: 100%;
+    height: 60px;
+}
+.input{
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+}
+.image-body{
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* background-color: seashell; */
+}
+.contain-imgfile{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    
+}
+.showImg{
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showImg img{
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    width: 80%;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    height: 80%;
+    /* width: 100%; */
+    /* height: auto; */
+    object-fit: cover;
+}
+.count-img-file{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    /* background-color: rosybrown; */
+}
+
+.inputBody{
+   
+    bottom: 25px;
+}
+/* .inputBody input[type="file" i]{
+
+} */
+.countImg{
+    width: 100%;
+    height: 20%;
+    /* background-color: darkred; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.display-img-box{
+    width: 4%;
+    margin-left: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 40%;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    background-color: lightblue;
+    transition: 2s;
+
+}
+.display-img-box:hover{
+    background-color: rgb(18, 22, 22);
+}
+
+.textarea-body{
+    /* padding: 10px; */
+    width: 100%;
+    height: 80%;
+    bottom: 10px;
+    position: absolute;
+}
+.textarea{
+    outline: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    resize: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: start;
+    margin-left: 10px;
+}
+.service-filed{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin-left: 10px;
+}
+.service-filed .input{
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+
+}
+.toggle-input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.social-body{
+    /* width: auto; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: inline-flex;
+}
+.social-body .poition-botton{
+    display: inline-flex;
+}
+
+.position-social{
+    height: 100%;
+    width: 25%;
+    position: relative;
+    margin-left: 10px;
+}
+.set-socials{
+    /* width: auto; */
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    bottom: 10px;
+   
+    
+}
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    box-sizing: border-box;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+ }
+ .rating-body{
+    width: 35%;
+    height: 50px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    position: absolute;
+    background: darkgrey;
+    bottom: 80px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .rating-body a{
+     cursor: pointer;
+ }

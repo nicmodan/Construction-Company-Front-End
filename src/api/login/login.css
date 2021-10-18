@@ -1,0 +1,58 @@
+.Logsection{
+    width: 100%;
+    height: 657px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornsilk;
+}
+.logBody{
+    width: 35%;
+    height: 81%;
+    background-color: rgba(79, 78, 74, 0.672);
+}
+.logHeader{
+    width: 100%;
+    height: 10%;
+    background-color: ghostwhite;
+    display: flex;
+}
+.signin{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #d0caca;
+}
+.signup{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logForm{
+    width: 100%;
+    height: 90%;
+    /* background-color: gainsboro; */
+    position: relative;
+}
+.signinForm{
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    position: absolute;
+}
+.signupForm{
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    position: absolute;
+}
+

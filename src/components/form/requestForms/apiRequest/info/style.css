@@ -1,0 +1,83 @@
+.contain-reviews{
+    width: 100%;
+    height: 100%;
+}
+.review-logo-name{
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+.review-logo{
+    width: 20%;
+    height: 100%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Company_logo{
+    width: 95%;
+    height: 95%;
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px 0px #8b8b8b;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.review-name{
+    width: 80%;
+    height: 100%;
+    background-color: lightcoral;
+    position: relative;
+    font-family: initial;
+}
+#company_name{
+    position: absolute;
+    bottom: 47px;
+    font-family: initial;
+}
+.services-mission-vision{
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+.services{
+    width: 40%;
+    height: 100%;
+    background-color: lightgreen;
+}
+.services-ul {
+    list-style: circle;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: inherit;
+  }
+  
+/* List element */
+.services-id {
+    margin: 40px 0 0 20px;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.vision-mission{
+    width: 60%;
+    height: 100%;
+}
+.vision{
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid blueviolet;
+    box-shadow: 5px 0 0 0 bisque;
+    background-color: lightskyblue;
+}
+.mission{
+    width: 100%;
+    height: 50%;
+    background-color: lightsalmon;
+}
+.vision-mision-h4, .vision-mision-h3{
+    margin: 0px 0 0 0;
+    padding-top: 10px;
+    padding-left: 15px;
+    font-family: monospace;
+}

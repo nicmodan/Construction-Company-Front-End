@@ -1,0 +1,23 @@
+.signinInputBody{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: thistle; */
+}
+.signupInputBody{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: thistle; */
+}
+form{
+    width: 100%;
+}
