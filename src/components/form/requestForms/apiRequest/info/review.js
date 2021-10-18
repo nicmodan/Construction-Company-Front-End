@@ -16,9 +16,24 @@ export const InfoReview = () =>{
     useEffect(()=>{
 
         const fetchData = async()=>{
-            const imgPath= "../../../../../../../backend/"
+            // const imgPath= "../../../../../../../backend/"
 
-            const data = await info.getId(user.id)
+            let data = await info.getId(user.id)
+
+            data = !data ? {
+                company_services: [],
+                company_overview: '',
+                company_vision: '',
+                company_name: '',
+                company_logo: {
+                    image: {
+                        contentType: '',
+                        data: ''
+                    }
+                }
+                
+            }: data
+
             const company_logo = data.company_logo //data.company_logo
 
             const arrayBufferToBase64 = (buffer)=> {
@@ -28,13 +43,13 @@ export const InfoReview = () =>{
                 return window.btoa(binary);
             }
 
-            // const content_type = `data:${company_logo.image.contentType};base64,`
-            // const bufferImagebase64 = arrayBufferToBase64(company_logo.image.data.data)
+            const content_type = `data:${company_logo.image.contentType};base64,`
+            const bufferImagebase64 = arrayBufferToBase64(company_logo.image.data.data)
             
-            // setLogo(content_type+bufferImagebase64)
+            setLogo(content_type+bufferImagebase64)
 
-            const path = imgPath+company_logo.image.path
-            setLogo(path)
+            // const path = imgPath+company_logo.image.path
+            // setLogo(path)
             
             setServices(data.company_services)
             setoverview(data.company_overview)

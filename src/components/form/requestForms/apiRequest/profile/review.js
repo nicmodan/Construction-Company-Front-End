@@ -59,13 +59,25 @@ export const ProfileReview = () =>{
         // setUrls(img)
 
         const fetchData = async ()=>{
-            const data = await profile.review(user.id)
+            let data = await profile.review(user.id)
             // const resulte = await axios.get(`api/profile/:${user.id}`)
             // const data = resulte.data
             // console.log(data)
-    
-            // const profileImg = data.image
+
+            data = !data? {
+                name: '',
+                SelfIntorduction: '',
+                contactInformation: {
+                    phoneNumber: '',
+                    email: '',
+                    socialLinks: {},
+                    location: ''
+                },
+                image: []
+             }: data 
+
             const profileImg = data.image
+
             const storeUrl = []
             // console.log(storeUrl)
             
@@ -77,13 +89,14 @@ export const ProfileReview = () =>{
             }
     
             for(let i=0; i<profileImg.length; i++){
-                // const contentType = `data:${profileImg[i].contentType};base64,`
-                // const bufferImagebase64 = arrayBufferToBase64(profileImg[i].data.data)
-                const url = profileImg[i].path
+
+                const contentType = `data:${profileImg[i].contentType};base64,`
+                const bufferImagebase64 = arrayBufferToBase64(profileImg[i].data.data)
+                // const url = profileImg[i].path
                 
-                storeUrl.push(url)
-                console.log(url)
-                // storeUrl.push(contentType+bufferImagebase64)
+                // storeUrl.push(url)
+                // console.log(url)
+                storeUrl.push(contentType+bufferImagebase64)
             }
             
         

@@ -64,10 +64,10 @@ const ProjectsReview = () =>{
     useEffect(()=>{
 
         const fetchData = async () =>{
-            const imgPath= "../../../../../../../backend"
-            const projectResponse = await projects.reviewId(user.id)
+            // const imgPath= "../../../../../../../backend"
+            let projectResponse = await projects.reviewId(user.id)
             // console.log(projectResponse)
-
+            
             const arrayBufferToBase64 = (buffer)=> {
                 var binary = '';
                 var bytes = [].slice.call(new Uint8Array(buffer));
@@ -91,13 +91,13 @@ const ProjectsReview = () =>{
 
                 for(let i = 0; i<imgList.length; i++){
 
-                    // const contentType = `data:${imgList[i].contentType};base64`
-                    // const bufferImagebase64 = arrayBufferToBase64(imgList[i].data.data)
-                    // storeUrl.push(contentType+bufferImagebase64)
+                    const contentType = `data:${imgList[i].contentType};base64`
+                    const bufferImagebase64 = arrayBufferToBase64(imgList[i].data.data)
+                    storeUrl.push(contentType+bufferImagebase64)
 
-                    const path = imgList[i].path
+                    // const path = imgList[i].path
 
-                    storeUrl.push(path)
+                    // storeUrl.push(path)
                 }
                 
                 StoreMainUrls.push(storeUrl)
@@ -125,7 +125,7 @@ const ProjectsReview = () =>{
                 <div key={`list_${i}`} className={!booleanClassPreview?'hideClass':'prj'}>
                     <div className='prj-img-info prj-img'>
                         {/* {console.log(productImg[i][0])} */}
-                        <img src={`${loc[i]}`} alt='images of products'/>
+                        <img src={loc[i]} alt='images of products'/>
                     </div>
                     <div className='prj-img-info prj-info' onClick={()=>storeIndexs(i)}>
                         <div className='prj-location'>
@@ -152,7 +152,7 @@ const ProjectsReview = () =>{
     const mapSlideShowImg = productImg[previewIndex].map((img, i)=>{
                                 return (
                                     <div key={`key_${i}`} className='prj-pre-img-contain'>
-                                        <img src={` http://localhost:3001/${img}`} alt='products slide images' />
+                                        <img src={img} alt='products slide images' />
                                     </div>
                                 )
                             })
