@@ -91,7 +91,7 @@ const ProjectsReview = () =>{
 
                 for(let i = 0; i<imgList.length; i++){
 
-                    const contentType = `data:${imgList[i].contentType};base64`
+                    const contentType = `data:${imgList[i].contentType};base64,`
                     const bufferImagebase64 = arrayBufferToBase64(imgList[i].data.data)
                     storeUrl.push(contentType+bufferImagebase64)
 
@@ -182,10 +182,11 @@ const ProjectsReview = () =>{
                     </span>
                     <div className= 'project-preview'>
                         <div className='projects-preview-img'>
-                            {/* {location.length > 0 && slideshow} */}
-                            <Slide>
-                                {mapSlideShowImg}
-                            </Slide>
+                            <div className='project-preview-img-main-contina'>
+                                <Slide>
+                                    {mapSlideShowImg}
+                                </Slide>
+                            </div>
                         </div>
                         <div className='projects-preview-info'>
                             <div className='prj-ratts'>
