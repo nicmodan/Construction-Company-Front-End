@@ -1,11 +1,12 @@
 .account{
     width: 100%;
-    height: 700px;
+    height: 1000px;
     background-color: azure;
 }
 .account-body{
+    /* 1294.89px 700 */
     width: 100%;
-    height: 100%;
+    height: 700px;
 }
 .account-header{
     width: 100%;
@@ -28,30 +29,71 @@
     float: right;
     background-color: cyan;
 }
-
-.account-nav{
+.account-nav-contain{
     width: 100%;
     height: 50%;
     border-top: 1px solid burlywood;
+    display: flex;
+}
+
+.account-nav{
+    width: 70%;
+    height: 100%;
     position: relative;
+    background-color: whitesmoke;
+}
+.account-nav-profil-logout{
+    width: 30%;
+    height: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+}
+.accNP{
+    position: relative;
+    width: 120px;
+    height: 79%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 60px;
+    background: white;
+}
+.accNP a{
+    color: black;
+}
+.accNP button{
+    border: 0px;
 }
 
 .account-section{
     width: 100%;
     height: 80%;
-    display: inline-flex;
+    
+}
+.account-section-contain{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+
 }
 .account-Componets{
-    width: 83%;
-    height: 100%;
-    background-color: brown;
+    /* 1193.37 560 */
+    width: 1073.37px;
+    height: 560px;
+    /* background-color: brown; */
     position: relative;
 }
 .account-feature{
-    width: 17%;
-    height: 100%;
-    background-color: hotpink;
-    border-right: 1px solid black;
+    width: 1073.37px;
+    height: 10%;
+    border-radius: 1pc;
+    background: linear-gradient(45deg, #6f49fe, transparent);
+    margin: 35px 0 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-right: 1px solid black; */
 }
 
 .button-container{

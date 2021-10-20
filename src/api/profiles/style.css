@@ -9,6 +9,7 @@ ul{
 }
 a{
     cursor: pointer;
+    color: black;
 }
 .profiles-conitain{
     width: 100%;
@@ -17,7 +18,7 @@ a{
 .profiles-header{
     width: 100%;
     height: 15%;
-    background-color: brown;
+    background-color: whitesmoke;
 }
 .profiles-img-names{
     width: 30%;
@@ -27,7 +28,7 @@ a{
 .profiles-img{
     width: 100%;
     height: 80%;
-    background-color: chocolate;
+    background-color: whitesmoke;
 }
 .profiles-img img{
     width: 47%;
@@ -41,7 +42,7 @@ a{
 .profiles-names{
     width: 100%;
     height: 20%;
-    background-color: darkgray;
+    background-color: whitesmoke;
 }
 .profiles-names-naves{
     width: 30%;
@@ -57,10 +58,10 @@ a{
     display: flex;
     align-items: end;
     justify-content: flex-end;
-    background-color: chartreuse;
+    background-color: whitesmoke;
 }
 .profiles-naves-contains{
-    width: 35%;
+    width: 200px;
     height: auto;
     position: relative;
     margin: 0 15px 0 0;
@@ -77,7 +78,7 @@ a{
     
 }
 .profiles-hidden-nav a:hover{
-    background-color: wheat;
+    background-color: rgb(247, 240, 227);
     transition: 0.5s;
 }
 .profiles-naves-contains:hover .profiles-hidden-nav{
@@ -87,17 +88,37 @@ a{
 .profiles-body{
     width: 100%;
     height: 85%;
-    background: burlywood;
+    
 }
 .profiles-contact-info{
     width: 100%;
     height: 50%;
     display: flex;
     background-image: url('../../preserve/health_safety_environment_policies.jpg');
-    background-position: center;
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    animation: scroll 70s linear infinite;
+    /* background-color: none; */
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
 }
+@keyframes scroll {
+    100%{
+     background-position:0px -3000px;
+   }
+ }
+ 
+ @media (prefers-reduced-motion) {
+    .profiles-contact-info {
+     animation: scroll 200s linear infinite;
+   }
+ }
+ @media (min-width: 670px) {
+    .hcc a {
+     font-size: 20px;
+   }
+ }
 .profiles-contacts{
     width: 30%;
     height: 100%;
@@ -106,7 +127,8 @@ a{
 .profiles-contacts-types{   
     width: 100%;
     height: 50%;
-    background-color: darkorange;
+    background-color: white;
+    border-bottom: 1px solid #7a7875;
 }
 .profiles-contacts-types p{
     padding-left: 20px;
@@ -115,7 +137,7 @@ a{
 .profiles-contacts-services{
     width: 100%;
     height: 50%;
-    background-color: darksalmon;
+    background-color: white;
 }
 .profiles-contacts-services h4{
     margin: 25px 0 0 25px;
@@ -124,7 +146,7 @@ a{
 .profiles-info{
     width: 70%;
     height: 100%;
-    background-color: darkred;
+    background: linear-gradient(45deg, white, #97c0eec2);
 }
 .profiles-discription, .profiles-vision, .profiles-overviews{
     width: 90%;
@@ -143,7 +165,7 @@ a{
 .profiles-contact-projects{
     width: 100%;
     height: 35%;
-    background-color: thistle;
+    background: linear-gradient(45deg, #bee4f4, #fff4f4b3);
     position: relative;
 }
 .profiles-contact-projects .project-body{

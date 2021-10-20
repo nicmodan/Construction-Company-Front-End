@@ -6,6 +6,8 @@ import info from "../../../../../services/info";
 
 
 export const InfoReview = () =>{
+    const [loading, setLoading] = useState(false)
+
     const [services, setServices] = useState([])
     const [overview, setoverview] = useState('')
     const [vision, setVision] = useState('')
@@ -19,6 +21,7 @@ export const InfoReview = () =>{
             // const imgPath= "../../../../../../../backend/"
 
             let data = await info.getId(user.id)
+            setLoading(!data?false:true)
 
             data = !data ? {
                 company_services: [],
@@ -55,6 +58,7 @@ export const InfoReview = () =>{
             setoverview(data.company_overview)
             setVision(data.company_vision)
             setName(data.company_name)
+            ///
             console.log(data)
         }
         fetchData()
@@ -68,25 +72,25 @@ export const InfoReview = () =>{
     return(
         <div className='contain-reviews'>
            <div className='review-logo-name'> 
-                <div className='review-logo'>
+                <div className={loading?'review-logo':'review-logo loading'}>
                     <img className='Company_logo' src={logo} alt='company logo' />
                 </div>
-                <div className='review-name'>
+                <div className={loading?'review-name':'review-name loading'}>
                     <h1 id='company_name'>{name}</h1>
                 </div>
            </div>
            <div className='services-mission-vision'> 
-                <div className='services'>
+                <div className={loading?'services':'services loading'}>
                     <ul className='services-ul'>
                         {mapServices}
                     </ul>
                 </div>
                 <div className='vision-mission'>
-                    <div className='vision'>
+                    <div className={loading?'vision':'vision loading'}>
                         <h3 className='vision-mision-h3'><u>Vision</u></h3>
                         <h4 className='vision-mision-h4'>{vision}</h4>
                     </div>
-                    <div className='mission'>
+                    <div className={loading?'mission':'mission loading'}>
                          <h3 className='vision-mision-h3'><u>Overview</u></h3>
                         <h4 className='vision-mision-h4' >{overview}</h4>
                     </div>

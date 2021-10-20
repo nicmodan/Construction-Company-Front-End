@@ -9,7 +9,8 @@ const path = require('path')
 
 
 export const ProfileReview = () =>{
-    
+    const [loading, setLoading] = useState(false)
+
     // let counts = 0
     // console.log(counts += 1)
     const [name, setName] = useState('')
@@ -63,6 +64,7 @@ export const ProfileReview = () =>{
             // const resulte = await axios.get(`api/profile/:${user.id}`)
             // const data = resulte.data
             // console.log(data)
+            setLoading(!data?false:true)
 
             data = !data? {
                 name: '',
@@ -118,15 +120,15 @@ export const ProfileReview = () =>{
     return(
         <div className='profile-review'>
             <div className='profile-img-name'>
-                <div className='profile-img'>
+                <div className={loading?'profile-img':'profile-img loading'}>
                     <img src={ url[0] } className='pro-img' alt='profile image'/>
                 </div>
-                <div className='profile-name'>
+                <div className={loading?'profile-name':'profile-name loading'}>
                     <h2 className='profile-name-info'>{name}</h2>
                 </div>
             </div>
             <div className='profile-details-intro'>
-                <div className='profile-details'>
+                <div className={loading?'profile-details':'profile-details loading'}>
                     <ul id='profile-ul'>
                         <li className='profile-li'>
                             <h4 className='profile-li-h4'>Email</h4>
@@ -142,15 +144,15 @@ export const ProfileReview = () =>{
                         </li>
                     </ul>
                 </div>
-                <div className='profile-intro'>
-                    <div className='pro-intro'>
+                <div className='profile-intro'style={loading?{}:{background:'white'}}>
+                    <div className={loading?'pro-intro':"pro-intro loading"}>
                         <h4 className='profile-intro-h4'>Self Discription</h4>
                         <p className='profile-intro-p'>{selfIntruction}</p>
                     </div>
                 </div>
             </div>
             <div className='profile-social-handels'>
-                <div className='profile-social'>
+                <div className={loading?'profile-social':'profile-social loading'}>
 
                     {
                         // console.log(social)

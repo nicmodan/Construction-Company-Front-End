@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './account.css'
 import Button from '../../components/button/button'
-import { Redirect, useHistory} from 'react-router-dom'
+import { Redirect, useHistory, Link} from 'react-router-dom'
 import Nav from '../../components/nav'
 import Hello from '../../components/hello/hello'
 import Logo from '../../components/logo'
@@ -15,7 +15,7 @@ const Account = React.memo(() =>{
     const history = useHistory()
 
     const [styleName, setStyleName] = useState('projects')
-    const [tyeInput, setTypeInput] = useState('create')
+    const [tyeInput, setTypeInput] = useState('review')
     
     ///////set style by it dev itms information
 
@@ -46,33 +46,51 @@ const Account = React.memo(() =>{
                             <Hello />
                         </div>
                     </div>
-                    <div className='account-nav'>
-                        <Nav list={['Information', 'Profile', 'projects']} 
-                            handleClick={(name)=>setStyleName(name)} />
+                    <div className='account-nav-contain'>
+                        <div className='account-nav'>
+                            <Nav list={['Information', 'Profile', 'projects']} 
+                                handleClick={(name)=>setStyleName(name)} />
+                        </div>
+                        <div className='account-nav-profil-logout'>
+                            <div className='account-nav-profile accNP button-48'>
+                                <span>
+                                   
+                                    <Link to='/profiles'>
+                                        PROFILE
+                                    </Link>
+                                   
+                                </span>
+                            </div>
+                            <div className='account-nav-logout accNP button-48'>
+                                <span>
+                                    <a onClick={handleClick}>LOGOUT</a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
                 <div className='account-section'>
+                    <div className='account-section-contain'>
+                        <div className='account-feature'>
+                            {/* the menu is constant except for the nav operations */}
+                            <Menu 
+                                names={['REVIEW', 'CREATE', 'REPLACE', 'REMOVE']} 
+                                handelChange={(name)=> setTypeInput(name)} />
+                        </div>
 
-                     <div className='account-feature'>
-                         {/* the menu is constant except for the nav operations */}
-                        <Menu 
-                            names={['REVIEW', 'CREATE', 'REPLACE', 'REMOVE']} 
-                            handelChange={(name)=> setTypeInput(name)} />
-                     </div>
-
-                    <div className='account-Componets'>
-                        {/* style name = profile, input type = review */}
-                        <Profile styleName={styleName} inputType={tyeInput}/>
-                        <Info styleName={styleName} inputType={tyeInput} />
-                        <Projects styleName={styleName} inputType={tyeInput}/>
-                    </div>
-                    
+                        <div className='account-Componets'>
+                            {/* style name = profile, input type = review */}
+                            <Profile styleName={styleName} inputType={tyeInput}/>
+                            <Info styleName={styleName} inputType={tyeInput} />
+                            <Projects styleName={styleName} inputType={tyeInput}/>
+                        </div>
+                    </div>  
                 </div>
             </div>
             <div className='button-container'>
                  <p> this is the token {`${data.token}`.substring(0,7)} </p>
-                 <Button type='submit' handleClick={handleClick} name='LOGOUT'/>
+
             </div>
             
         </div>

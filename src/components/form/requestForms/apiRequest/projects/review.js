@@ -10,6 +10,9 @@ import 'react-slideshow-image/dist/styles.css'
 
 
 const ProjectsReview = () =>{
+    //remember to change this to false for loading 
+    const [loading, setLoading] = useState(false)
+
     const [location, setLocation] = useState([])
     const [information, setInformation] = useState([])
     const [ratings, setRating] = useState([])
@@ -66,6 +69,7 @@ const ProjectsReview = () =>{
         const fetchData = async () =>{
             // const imgPath= "../../../../../../../backend"
             let projectResponse = await projects.reviewId(user.id)
+            setLoading(!projectResponse?false:true)
             // console.log(projectResponse)
             
             const arrayBufferToBase64 = (buffer)=> {
@@ -123,22 +127,23 @@ const ProjectsReview = () =>{
         // <  {className='body-projects'*/}>
             
                 <div key={`list_${i}`} className={!booleanClassPreview?'hideClass':'prj'}>
-                    <div className='prj-img-info prj-img'>
+                    <div
+                     className={loading?'prj-img-info prj-img':'prj-img-info prj-img loading'}>
                         {/* {console.log(productImg[i][0])} */}
                         <img src={loc[i]} alt='images of products'/>
                     </div>
                     <div className='prj-img-info prj-info' onClick={()=>storeIndexs(i)}>
-                        <div className='prj-location'>
+                        <div className={loading?'prj-location':'prj-location loading'}>
                             <h4>
                                 {location[i]}
                             </h4>
                         </div>
-                        <div className='prj-discription'>
+                        <div className={loading?'prj-discription':'prj-discription loading'}>
                             <p>
                                 {information[i]}
                             </p>
                         </div>
-                        <div className='prj-ratings-price'>
+                        <div className={loading?'prj-ratings-price':'prj-ratings-price loading'}>
                             <div className='prj-price'></div>
                             <div className='prj-ratings'>
                                 <RatingStar n={ratings[i]} finalRattings={resulte=>countRatings = resulte} style={rattingStyle} />

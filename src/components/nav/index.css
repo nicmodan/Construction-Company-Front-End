@@ -17,13 +17,13 @@ nav{
     margin: 0 65px;
 }
 #nav-ul li button{
-    border-radius: 0;
-    background-color: rgba(136, 136, 136, 0.152);
+    /* border-radius: 0;
+    background-color: rgba(136, 136, 136, 0.152); */
 }
 #nav-ul li button:hover{
-    background-color: white;
+    /* background-color: white;
     border-radius: 0;
-    border: 0;
+    border: 0; */
 }
 /* .Information{} 
 .Profile{}
