@@ -6,6 +6,7 @@ import 'react-slideshow-image/dist/styles.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProjectsReview from '../../components/form/requestForms/apiRequest/projects/review'
+import CustomerReview from "../../components/customerReview";
 
 
 //// imported imagse for the home paege 
@@ -14,7 +15,7 @@ import inquriry from '../../preserve/Inquiry.jpg'
 import projectsImg from '../../preserve/projects.jpg'
 import servicesImg from '../../preserve/services.jpg'
 import others from '../../preserve/yance.jpg'
-import profileImg from '../../preserve/01.jpg'
+
 import logo from '../../preserve/logo.png'
 
 const Home = () =>{
@@ -111,7 +112,7 @@ const Home = () =>{
                             </div>
 
                             <div className='home-nav-main'>
-                                <a href={''}> Contacts </a>
+                                <a > Contacts </a>
                                 <div className="home-nav-main-contain">
                                     <a href>{'Emails & main'}</a>
                                     <hr />
@@ -193,8 +194,11 @@ const Home = () =>{
                 {/* PROJECTS  */}
                 <div className='home-projects' id='projects'>
                     <div className='home-projects-contain'>
-                        <ProjectsReview />
+                        <ProjectsReview allBool={true}/>
                     </div>
+                </div>
+                <div className='home-customer-review'>
+                    <CustomerReview />
                 </div>
                 <div className='home-contact' id='contacts'>
                     <div className='home-contacts-body'>
@@ -226,7 +230,9 @@ const Home = () =>{
                 </div>
                 <div id='home-projects'></div>
             </div>
-            <div className='home-footer'></div>
+            <div className='home-footer'>
+                
+            </div>
         </div>
     )
 }

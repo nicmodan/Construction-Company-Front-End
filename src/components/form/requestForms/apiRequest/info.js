@@ -12,6 +12,7 @@ import Notifiation from "../../../notification/notification"
 
 const InfoForm = ({inputtype}) =>{
 
+    const [loading, setLoading] = useState(false)
     const [name, setName] = useState('')
     const [vision, setVision] = useState('')
     const [overview, setoverview] = useState('')
@@ -86,6 +87,7 @@ const InfoForm = ({inputtype}) =>{
             // console.log(resData, resLogo)
             setMessage('Congratulationse you have succefuly renderd to the data base')
             setStyleMessage({color: 'green'})
+            setLoading(false)
 
             setInterval(()=>{
                 setMessage(null)
@@ -98,6 +100,7 @@ const InfoForm = ({inputtype}) =>{
             setInterval(()=>{
                 setMessage(null)
             }, 5000)
+            setLoading(false)
 
         }
 
@@ -147,7 +150,9 @@ const InfoForm = ({inputtype}) =>{
                     <div className='button-station'>
                         <Button type='submite'
                                 // handleClick={(e)=>e.preventDefault} 
-                                name='submite' />
+                                name='submite' 
+                                checkClick={loading}
+                                handleClick={()=>setLoading(true)} />
                     </div> 
                     {/* lets create informations */}
                 </form>

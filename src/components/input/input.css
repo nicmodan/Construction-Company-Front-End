@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
 .inputBody{
     width: 100%;
     height: 60px;
@@ -103,7 +104,7 @@
     resize: none;
     font-size: 15px;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family:monospace;
     text-align: start;
     margin-left: 10px;
 }
@@ -191,3 +192,4 @@
  .rating-body a{
      cursor: pointer;
  }
+ 

@@ -1,5 +1,5 @@
 .review-body{
-    background-color: blueviolet;
+    background-color: whitesmoke;
     width: 100%;
     height: 100%;
 }
@@ -124,4 +124,221 @@
 }
 .project-form .display-img-box{
     width: 3%;
+}
+
+/* RESPONSIVE WEB DISINGE */
+
+@media only screen and (max-width: 800px) {
+    .account-body {
+        height: 760px;
+    }
+    .account-feature{
+        width: 100%;
+        margin: 35px 0 30px 0;
+      }
+      .menu{
+        margin: 0px 5px;
+      }
+      .account-Componets{
+        width: 100%;
+      }
+      .menu-body {
+        width: 100%;
+      }
+      .account-greatings{
+        width: 60%;
+      }
+      .account-greatings h4{
+        font-size: 9px;
+      }
+      .account-logo {
+        width: 30%;
+     }
+     .account-nav {
+        width: 62%;
+     }
+     .account-header {
+        height: 12%;
+    }
+     .account-head{
+         height: 70px;
+     }
+     .account-nav-profil-logout {
+        width: 38%;
+        align-items: none;
+     }
+     .account-nav-contain {
+        height: 43px;
+     }
+     .logo img {
+        width: 100%;
+        padding: 0px;
+     }
+     .logo {
+        font-size: 9.5px;
+        margin: 0px;
+    }
+    .logo h3{
+        display: none;
+        margin: 0;
+    }
+    #nav-ul li {
+        margin: 0 5px;
+    }
+    .button-48{
+        font-size: 8px;
+        padding: 7.5px 6.2px;
+        border-radius: 5px;
+    }
+    .accNP {
+        margin: -4px 0 0 10px;
+        height: 59%;
+    }
+    .account-section-contain {
+        width: 90%;
+    }
+    .menu-body {
+        height: 50%;
+    }
+    .review .prj{
+        margin: 10px 0 0 30px;
+    }
+    .img-contain {
+        display: block;
+        height: 230px;
+    }
+    .create-body {
+        height: 675px;
+    }
+    .contain-imgFile {
+        width: 100%;
+        height: 60%;
+        margin-top: 10px;
+    }
+    
+    .image-body {
+        height: 150px;
+
+    }
+    .contain-imgfile {
+        display: flex;
+        /* height: 10%; */
+    }
+    
+    .contain-input-name{
+        height: 20%;
+        width: 255px;
+        margin-left: 5px;
+    }
+    .contain-input-name .inputBody {
+        bottom: 0px;
+    }
+    
+    .create-body form {
+        width: 100%;
+    }
+    .textarea-contain {
+        height: 215px;
+        display: block;
+    }
+    .textarea-contain .textarea {
+        font-size: 9px;
+    }
+    .textare-overview, .textare-vision {
+        width: 100%;
+        height: 40%;
+        position: relative;
+    }
+    .childe-body h3{
+        display: none;
+    }
+    .service-filed .input {
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        font-size: 8px;
+    }
+    .service-filed {
+        margin-left: 5px;
+        width: 100%;
+    }
+    .service-contain {
+        height: 77px;
+    }
+    .profile-form .contain-input-name .inputBody {
+        bottom: 0;
+    }
+    .profile-form .discription .textarea{
+        font-size: 10px;
+        padding: 10px;
+        height: 85px;
+        width: 240px
+    } 
+    .discription-location p{
+        margin: 0px 0px 5px 10px;
+    }
+    .discription {
+        height: 50%;
+        margin: 5px 0 0 0;
+    }
+    .discription .textarea{
+        font-size: 10px;
+        padding: 10px;
+        width: 255px;
+        height: 80px;
+    }
+    .location {
+        font-size: 15px;
+        margin-left: 10px;
+        width: 90%;
+        height: 35%;
+        margin-bottom: 0px;
+    }
+    .social {
+        height: 140px;
+    }
+    .social-body {
+        /* width: auto; */
+        display: block;
+        height: 60px;
+    }
+    .position-social {
+        height: 90%;
+        width: 45%;
+        position: relative;
+        margin-left: 6px;
+        float: left;
+    }
+    .project-form  .image-body {
+        height: 200px;
+    }
+    /* .project-form{
+
+    } */
+    .project-form .count-img-file {
+        width: 50%;
+        height: 55%;
+        position: relative;
+        /* background-color: rosybrown; */
+    }
+    .project-form .contain-imgfile {
+        display: block;
+        height: 80%;
+    }
+    .project-form .contain-input-name{
+        margin-top: 60px;
+        margin-left: 5px;
+    }
+    .project-form .rating-body {
+        bottom: 0px;
+    }
+    .notification-resulte {
+        width: 40%;
+        font-size: 15px;
+    }
+    .button-station {
+        width: 50%;
+        height: 30px;
+    }
+    
 }

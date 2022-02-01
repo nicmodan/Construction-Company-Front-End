@@ -10,6 +10,7 @@ import profile from "../../../../services/profile";
 import Notifiation from "../../../notification/notification";
 
 const ProfileForm = ({inputtype}) =>{
+    const [loading, setLoading] = useState(false)
     const [name, setName] = useState('')
     const [selfIntro, setSelfIntro] = useState('')
     const [location, setLocation] = useState('')
@@ -68,6 +69,7 @@ const ProfileForm = ({inputtype}) =>{
             toggleSocialRef.current.changeState()
 
             setMessage('congrtulation on posting your profile')
+            setLoading(false)
             setStyleMessage({color: 'green'})
             setInterval(()=>{
                 setMessage(null)
@@ -78,6 +80,7 @@ const ProfileForm = ({inputtype}) =>{
 
         }catch(exception){
             setMessage('please file the reqired profile Information')
+            setLoading(false)
             setInterval(()=>{
                 setMessage(null)
             }, 5000)
@@ -140,7 +143,9 @@ const ProfileForm = ({inputtype}) =>{
                         <div className='button-station'>
                             <Button type='submit'
                                     // handleClick={(e)=>e.preventDefault} 
-                                    name='submit' />
+                                    name='submit' 
+                                    checkClick={loading}
+                                    handleClick={()=>setLoading(true)}/>
                          </div> 
                     </div>
                 </form>

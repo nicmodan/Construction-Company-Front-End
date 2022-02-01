@@ -110,7 +110,7 @@ export const ProfileReview = () =>{
             setLocation(data.contactInformation.location)
             //plasecheck this
             setUrls(storeUrl)
-            console.log(data.contactInformation.socialLinks)
+            // console.log(data.contactInformation.socialLinks)
         }
 
         fetchData()

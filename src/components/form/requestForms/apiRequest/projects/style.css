@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
 .project-body{
     width: 100%;
     height: 100%;
@@ -55,19 +59,19 @@
 .prj-location{
     width: 100%;
     height: 20%;
-    background-color: yellow;
+    /* background-color: yellow; */
     overflow: hidden;
 }
 .prj-discription{
     width: 100%;
     height: 60%;
-    background-color: darkcyan;
+    /* background-color: darkcyan; */
     overflow: hidden;
 }
 .prj-ratings-price{
     width: 100%;
     height: 20%;
-    background-color: rosybrown;
+    background-color: rgb(243, 243, 243);
     display: flex;
 }
 .prj-price{
@@ -79,10 +83,15 @@
     height: 100%;
     position: relative;
 }
+.prj-img-info .prj-location, .prj-img-info .prj-discription, .prj-img-info .prj-ratings-price{
+    /* background-color: rgb(226 226 226 / 55%); */
+    opacity: 0.8;
+    overflow: hidden;
+}
 .project-preview-body{
-    width: 100%;
+    width: 1030.63px;
     height: 100%;
-    background-color: rosybrown;
+    background: linear-gradient(45deg, #bfd9fc, #e9e9e900);
     position: absolute;
     display: flex;
     align-items: center;
@@ -117,7 +126,7 @@
 .projects-preview-img{
     width: 50%;
     height: 100%;
-    background-color: blue;
+    background-color: white;
     position: relative;
     float: left;
     display: flex;
@@ -144,19 +153,25 @@
     height: 100%;
     float: right;
 }
+.projects-preview-info .prj-location{
+    display: flex;
+    align-items: center;
+}
 .prj-ratts{
     width: 100%;
     height: 20%;
     position: relative;
-    background-color: green;
+    background-color: #d6d5d3;;
 }
 .prj-location{
     width: 100%;
     height: 20%;
-    background-color: rosybrown;
+    background-color: rgb(226, 226, 226);
+    font-family: 'Slabo 27px', serif;
 }
 .prj-discription{
     width: 100%;
     height: 60%;
-    background-color: goldenrod;
+    background-color: #d6d5d3;
+    font-family: 'PT Sans Narrow', sans-serif;
 }

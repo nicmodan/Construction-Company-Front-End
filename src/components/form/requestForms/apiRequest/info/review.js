@@ -59,7 +59,7 @@ export const InfoReview = () =>{
             setVision(data.company_vision)
             setName(data.company_name)
             ///
-            console.log(data)
+            // console.log(data)
         }
         fetchData()
 

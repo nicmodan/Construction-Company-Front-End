@@ -14,8 +14,8 @@ import Projects from '../../components/form/APIForm/projects'
 const Account = React.memo(() =>{
     const history = useHistory()
 
-    const [styleName, setStyleName] = useState('projects')
-    const [tyeInput, setTypeInput] = useState('review')
+    const [styleName, setStyleName] = useState('information')
+    const [tyeInput, setTypeInput] = useState('create')
     
     ///////set style by it dev itms information
 
@@ -88,10 +88,10 @@ const Account = React.memo(() =>{
                     </div>  
                 </div>
             </div>
-            <div className='button-container'>
+            {/* <div className='button-container'>
                  <p> this is the token {`${data.token}`.substring(0,7)} </p>
 
-            </div>
+            </div> */}
             
         </div>
     )

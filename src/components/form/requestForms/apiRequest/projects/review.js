@@ -9,7 +9,7 @@ import 'react-slideshow-image/dist/styles.css'
 
 
 
-const ProjectsReview = () =>{
+const ProjectsReview = ({allBool}) =>{
     //remember to change this to false for loading 
     const [loading, setLoading] = useState(false)
 
@@ -30,13 +30,15 @@ const ProjectsReview = () =>{
     const rattingStyle = {
         width: '100%',
         height: '100%',
-        bottom: '0'
+        bottom: '0',
+        background: 'none',
     }
     const preRattingStyle = {
         width: '30%',
         height: '72%',
         bottom: '5px',
-        margin: '0 0 0 10px'
+        margin: '0 0 0 10px',
+        background: 'none',
     }
    
    
@@ -68,7 +70,7 @@ const ProjectsReview = () =>{
 
         const fetchData = async () =>{
             // const imgPath= "../../../../../../../backend"
-            let projectResponse = await projects.reviewId(user.id)
+            let projectResponse = allBool ? await projects.review(): await projects.reviewId(user.id)
             setLoading(!projectResponse?false:true)
             // console.log(projectResponse)
             
@@ -130,7 +132,7 @@ const ProjectsReview = () =>{
                     <div
                      className={loading?'prj-img-info prj-img':'prj-img-info prj-img loading'}>
                         {/* {console.log(productImg[i][0])} */}
-                        <img src={loc[i]} alt='images of products'/>
+                        <img src={loc[0]} alt='images of products'/>
                     </div>
                     <div className='prj-img-info prj-info' onClick={()=>storeIndexs(i)}>
                         <div className={loading?'prj-location':'prj-location loading'}>
@@ -146,7 +148,9 @@ const ProjectsReview = () =>{
                         <div className={loading?'prj-ratings-price':'prj-ratings-price loading'}>
                             <div className='prj-price'></div>
                             <div className='prj-ratings'>
-                                <RatingStar n={ratings[i]} finalRattings={resulte=>countRatings = resulte} style={rattingStyle} />
+                                <RatingStar finalRattings={(resulte)=>countRatings = resulte}
+                                            number={ratings[i]}
+                                            style={rattingStyle} />
                             </div>
                         </div>
                     </div>
@@ -195,15 +199,19 @@ const ProjectsReview = () =>{
                         </div>
                         <div className='projects-preview-info'>
                             <div className='prj-ratts'>
-                                <RatingStar n={ratings[previewIndex]}
-                                            finalRattings={resulte=>countRatings = resulte} 
+                                <RatingStar finalRattings={(resulte)=> countRatings = resulte} 
+                                            number={ratings[previewIndex]}
                                             style={preRattingStyle} />
                             </div>
                             <div className='prj-location'>
-                                {location[previewIndex]}
+                                <h4>
+                                    {location[previewIndex]}
+                                </h4>
                             </div>
                             <div className='prj-discription'>
-                                {information[previewIndex]}
+                                <p>
+                                    {information[previewIndex]}
+                                </p>
                             </div>
                         </div>
                     </div>

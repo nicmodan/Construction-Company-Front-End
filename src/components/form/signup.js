@@ -9,6 +9,8 @@ import createAccount from "../../services/account";
 /// creating account should have its own tokenkey 
 
 const Signup =()=>{
+    const [loading, setLoading] = useState(false)
+
     const [password, setPassword] = useState('')
     const [phoneNumber, setPhoneNumber] =useState('')
     const [firstName, setFirstName] = useState('')
@@ -53,6 +55,7 @@ const Signup =()=>{
                 
 
         }catch(exception){
+                setLoading(false)
                 setErrorMessage('User Input Not  Filed')
                 setTimeout(()=>{
                         setErrorMessage(null)
@@ -102,7 +105,9 @@ const Signup =()=>{
 
                 <Notifiation message={errorMessage}/>
                 <br />
-                <Button type='submit'
+                <Button checkClick={loading}
+                        handleClick={()=>setLoading(true)}
+                        type='submit'
                         name="SIGN UP"/>
             </form>
         </div>

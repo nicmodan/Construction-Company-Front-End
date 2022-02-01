@@ -8,8 +8,11 @@ import Notifiation from '../notification/notification'
 import loginUser from '../../services/user'
 
 const Signin = () =>{
+    const [loading, setLoading] = useState(false)
+
     const [password, setPassword] = useState('')
     const [username, setUsername] = useState('')
+
     // const [user, setUser] = useState(null)
     const [errorMessage, setErrorMessage] = useState(null)
     const history = useHistory()
@@ -37,6 +40,7 @@ const Signin = () =>{
             
         }catch(exception){
             setErrorMessage('wronge username or password')
+            setLoading(false)
             setTimeout(()=>{
                 setErrorMessage(null)
             }, 5000)
@@ -59,7 +63,9 @@ const Signin = () =>{
                        handelChange={({ target })=> setPassword(target.value)}/>
                        <Notifiation message={errorMessage} />
                        <br />
-                <Button type='submit'
+                <Button checkClick={loading}
+                        handleClick={()=>setLoading(true)}
+                        type='submit'
                         name='LOGIN'
                 />         
             </form>

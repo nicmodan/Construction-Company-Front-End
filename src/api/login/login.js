@@ -11,8 +11,8 @@ const Login =()=>{
     const signinStyle =  { display: booleanStyle ? ' ': 'none'}
     const signupStyle = { display: booleanStyle ? 'none': ' ' }
 
-    const signinbuttonStyle =  { background: booleanStyle ? '#b0b0b0': ''}
-    const signupbuttonStyle =  { background: booleanStyle ? '': '#b0b0b0'}
+    const signinbuttonStyle =  { background: booleanStyle ? '#f0f0f0': ''}
+    const signupbuttonStyle =  { background: booleanStyle ? '': '#f0f0f0'}
     
     return(
         <div className='Logsection'>

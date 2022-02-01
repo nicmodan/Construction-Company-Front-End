@@ -3,8 +3,8 @@ import './input.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-export const RatingStar = React.forwardRef (({finalRattings, style, n}, ref) =>{
-    const [count, setCount] = useState(n)
+export const RatingStar = React.forwardRef (({finalRattings, style, number}, ref) =>{
+    const [count, setCount] = useState(number)
     const numbers = [1, 2, 3, 4, 5]
     finalRattings({
         resulte: count

@@ -66,3 +66,15 @@
     height: 200px;
     position: relative;
 } */
+@media only screen and (max-width: 750px){
+    .toggleChild {
+        width: 60px;
+        margin-left: 3px;
+    }
+    .delte, .add {
+        width: 35px;
+        height: 30px;
+        position: relative;
+        margin-top: 0px;
+    }
+ }

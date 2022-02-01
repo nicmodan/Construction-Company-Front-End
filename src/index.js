@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Login from './api/login/login';
 import Account from './api/account/account';
 import Profile from './api/profiles'
+import './responseive.css'
 
 
 // import reportWebVitals from './reportWebVitals';
 
 // const auth = window.localStorage.getItem('userInfoAndToken')
 // const validatAuth = auth ? true : false
+
+const unKowunEndPoint =()=>{
+  <div>
+    <p>Click to route to 'HOME' which isn't a registered route:</p>
+    <Link to="/login">
+      Let's go Home
+    </Link>
+  </div>
+}
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,6 +30,7 @@ ReactDOM.render(
       <Route exact path='/login' component={Login} />
       <Route exact path='/account' component={Account} />
       <Route exact path='/profiles' component={Profile} />
+      <Route component={unKowunEndPoint} />
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')

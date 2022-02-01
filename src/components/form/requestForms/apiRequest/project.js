@@ -10,6 +10,8 @@ import projects from "../../../../services/projects";
 import ProjectsReview from "./projects/review";
 
 const ProjectsForm = ({inputtype}) =>{
+    const [loading, setLoading] = useState(false)
+
     const [location, setLocation] = useState('')
     // const [sold, setSold] = useState(Boolean)   /// BY DEFULT WHEN CREATING THIS SHOULD AWAYAS BE TURE
     const [discription, setDiscription] = useState('')
@@ -67,6 +69,7 @@ const ProjectsForm = ({inputtype}) =>{
             toggleResetRattings.current.changeState()
 
             setMessage('congratulations you just posted yoye projects')
+            setLoading(false)
             setStyleMessage({color: 'green'})
 
             setInterval(()=>{
@@ -80,6 +83,7 @@ const ProjectsForm = ({inputtype}) =>{
 
         }catch(exception){
             setMessage('please set Proper Project Info')
+            setLoading(false)
             setInterval(()=>{
                 setMessage(null)
             }, 5000)
@@ -136,7 +140,9 @@ const ProjectsForm = ({inputtype}) =>{
                         <div className='button-station'>
                             <Button type='submit'
                                     // handleClick={(e)=>e.preventDefault} 
-                                    name='submit' />
+                                    name='submit'
+                                    checkClick={loading}
+                                    handleClick={()=>setLoading(true)} />
                          </div> 
 
                     {/* lets create projects */}
